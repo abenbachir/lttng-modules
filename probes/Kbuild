@@ -11,6 +11,7 @@ obj-$(CONFIG_LTTNG) += lttng-probe-kmem.o
 obj-$(CONFIG_LTTNG) += lttng-probe-module.o
 obj-$(CONFIG_LTTNG) += lttng-probe-power.o
 obj-$(CONFIG_LTTNG) += lttng-probe-statedump.o
+obj-$(CONFIG_LTTNG) += hypergraph-host.o
 
 i2c_dep = $(srctree)/include/trace/events/i2c.h
 ifneq ($(wildcard $(i2c_dep)),)
