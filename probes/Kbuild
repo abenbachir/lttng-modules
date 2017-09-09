@@ -261,6 +261,8 @@ endif # CONFIG_KRETPROBES
 ifneq ($(CONFIG_DYNAMIC_FTRACE),)
   ifeq ($(have_ftrace_header),yes)
     obj-$(CONFIG_LTTNG) += lttng-ftrace.o
+    obj-$(CONFIG_LTTNG) += lttng-fgraph.o
+    CFLAGS_REMOVE_lttng-fgraph.o = -pg
   else
     $(warning Files $(ftrace_dep) not found. Probe "ftrace" is disabled. Use full kernel source tree to enable it.)
   endif
